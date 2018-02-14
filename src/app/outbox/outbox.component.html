@@ -1,0 +1,18 @@
+<h1> OUTBOX </h1>
+
+<table  *ngIf='mails && mails.length'>
+  <thead>
+      <tr>
+          <th>Subject</th>
+          <th>To</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor='let mail of mails'>
+          <td>{{mail.subject}}</td>
+          <td>{{mail.receiver.name}} {{mail.receiver.surname}}</td>
+          <td>{{mail.content}}</td>
+          
+      </tr>
+  </tbody>
+</table>

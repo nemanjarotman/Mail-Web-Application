@@ -1,0 +1,18 @@
+
+<h1> INBOX </h1>
+<table  *ngIf='mails && mails.length'>
+  <thead>
+      <tr>
+          <th>Subject</th>
+          <th>From</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor='let mail of mails'>
+          <td>{{mail.subject}}</td>
+          <td>{{mail.sender.name}} {{mail.sender.surname}}</td>
+          <td>{{mail.content}}</td>
+          
+      </tr>
+  </tbody>
+</table>

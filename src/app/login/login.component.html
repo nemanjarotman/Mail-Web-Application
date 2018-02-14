@@ -1,0 +1,46 @@
+<!-- 
+    READ ME 
+    https://angular.io/guide/form-validation 
+
+-->
+
+
+<!-- 
+    #username="ngModel" exports NgModel into a local variable called username. 
+    NgModel mirrors many of the properties of its underlying FormControl instance, so you can use this in the template to check for control states such as valid and dirty.
+
+-->
+
+
+<h1> LOGIN </h1>
+
+
+<form (ngSubmit)="onLoginClicked()" #loginForm="ngForm">
+
+    <input [(ngModel)]="user.username" required type="text" name="username" #username="ngModel" placeholder="Korisnicko Ime">
+
+    <input [(ngModel)]="user.password" required type="password" name="password" #password="ngModel" placeholder="Lozinka">
+
+<button type="submit" [disabled]="!loginForm.form.valid">LOGIN</button>
+
+</form>
+
+
+<!--- VALIDACIJA  ERROR INFO START -->
+
+<div *ngIf="username.invalid && (username.dirty || username.touched)" class="opasno" >
+    <div *ngIf="username.errors.required">
+            <marquee behavior=scroll direction="left" scrollamount="10">        Unesite Korisnicko Ime!!!!</marquee>
+
+    </div>
+</div>
+<div *ngIf="password.invalid && (password.dirty || password.touched)" class="opasno">
+    <div *ngIf="password.errors.required">
+        <marquee behavior=scroll direction="left" scrollamount="10">
+        Unesite LOZINIKKUUUKURURURU!!!
+        </marquee>
+    </div>
+</div>
+<!--- VALIDACIJA ERROR INFO ENDDDDDDDD-->
+
+<h1>Two-way bind sa veybi...woo...: {{user.username}}</h1>

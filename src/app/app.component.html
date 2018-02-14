@@ -1,0 +1,19 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+  <h1 *ngIf="user.pro" >Jako pro student</h1>
+  <h1 *ngIf="user.igraIgrice" >Jako pro kanteras</h1>
+</div>
+
+<nav class="topnav">
+    <a routerLink="/login" routerLinkActive="login">Login</a>
+    <a routerLink="/inbox" routerLinkActive="inbox">Inbox</a>
+    <a routerLink="/outbox" routerLinkActive="active">Outbox</a>
+    <a routerLink="/new-mail" routerLinkActive="new-mail">New Mail</a>
+</nav>
+
+<router-outlet></router-outlet>
