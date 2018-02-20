@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule} from '@angular/core';
+import { CustomMaterialModule} from './material.module';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';  // <-- #1 import module

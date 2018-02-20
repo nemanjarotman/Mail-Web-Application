@@ -1,5 +1,25 @@
+::-moz-placeholder { 
+    color:white;
+  }
+h1{
+    text-align: center;
+    color:white;
+}
+
+form{
+    margin: auto;
+    width: 300px;    
+}
 .opasno {
     background-color: red;
     font-size: 300%;
     padding: 20px;
+}
+
+.image{ 
+    height: 40em;
+    background-size: cover; 
+    width:auto;
+    background-image:url('http://walldiskpaper.com/wp-content/uploads/2014/10/Abstract-Fire-Cool-Wallpaper-HD.jpg');
+    background-position:50% 50%;
 }
