@@ -1,8 +1,12 @@
 ::-moz-placeholder { 
     color:white;
-  }
+}
 h1{
     text-align: center;
+    color:white;
+}
+
+input[type="text"] {
     color:white;
 }
 
