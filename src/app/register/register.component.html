@@ -1,0 +1,15 @@
+<div class="image">
+    <h1>REGISTER</h1>
+        <form (ngSubmit)="onRegisterClicked()" #registerForm="ngForm">
+            <input [(ngModel)]="user.name" required type="text" name="name" #name="ngModel" placeholder="Ime">      
+
+            <input [(ngModel)]="user.surname" required type="text" name="surname" #surname="ngModel" placeholder="Prezime">
+
+            <input [(ngModel)]="user.username" required type="text" name="username" #username="ngModel" placeholder="Korisnicko Ime">
+
+            <input [(ngModel)]="user.password" required type="password" name="password" #password="ngModel" placeholder="Lozinka">
+
+            <button type="submit" [disabled]="!registerForm.form.valid">REGISTER</button>
+
+        </form>
+</div>

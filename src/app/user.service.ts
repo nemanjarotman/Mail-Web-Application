@@ -6,7 +6,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import {LoginDTO} from './model/dto/login.dto';
-
+import {RegisterDTO} from './model/dto/register.dto';
 
 @Injectable()
 export class UserService {
@@ -23,8 +23,22 @@ export class UserService {
     return this._userId;
   }
 
+  public register(username:string, password:string) : Observable<RegisterDTO>{
+    let dto: RegisterDTO  = {
+      name: name,
+      surname: surname,
+      username: username,
+      password: password,
+      id: 0
+    };
+    let url = this._userApiUrl + "/register";
+    return this._http.post<RegisterDTO>(url, dto)
+         .do(data => this._userId = data.id)
+        .catch(this.handleError);
+  }
+
   public login(username: string, password: string) : Observable<LoginDTO> {
-    let dto: LoginDTO = {
+    let dto: LoginDTO  = {
       username: username,
       password: password,
       id: 0

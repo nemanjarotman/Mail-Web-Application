@@ -1,0 +1,24 @@
+::-moz-placeholder { 
+    color:white;
+}
+h1{
+    text-align: center;
+    color:white;
+}
+
+input[type="text"] {
+    color:white;
+}
+
+form{
+    margin: auto;
+    width: 300px;    
+}
+
+.image{ 
+    height: 40em;
+    background-size: cover; 
+    width:auto;
+    background-image:url('https://s-media-cache-ak0.pinimg.com/originals/ee/00/13/ee001330edec67e1e661c09b8e075962.jpg');
+    background-position:50% 50%;
+}

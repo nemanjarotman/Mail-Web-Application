@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { InboxComponent } from './inbox/inbox.component';
 import { OutboxComponent } from './outbox/outbox.component';
+import { RegisterComponent } from './register/register.component';
 
 import { RouterModule } from '@angular/router';
 import { NewEmailComponent } from './new-email/new-email.component';
@@ -32,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     InboxComponent,
     OutboxComponent,
-    NewEmailComponent
+    NewEmailComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -40,11 +42,12 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot([
+      { path: 'register', component: RegisterComponent},
       { path: 'login', component: LoginComponent },
       { path: 'inbox', component: InboxComponent },
-      {path: 'outbox', component: OutboxComponent },
-      {path: 'new-mail', component: NewEmailComponent},
-      {path: '**', redirectTo: 'inbox', pathMatch: 'full'}
+      { path: 'outbox', component: OutboxComponent },
+      { path: 'new-mail', component: NewEmailComponent},
+      { path: '**', redirectTo: 'login', pathMatch: 'full'}
   ], {useHash: true}),
   ],
   providers: [UserService, MailService, HttpClientModule],
