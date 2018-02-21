@@ -12,6 +12,7 @@ import {Router, ActivatedRoute, ParamMap} from '@angular/router';
 })
 export class RegisterComponent implements OnInit{
   user: User;
+  loading=false;
 
 
 constructor(private _userService: UserService, private router:Router){}
@@ -22,12 +23,14 @@ ngOnInit() {
 }
 
 public onRegisterClicked(): void{
+  this.loading=true;
   alert("Zahtev za registraciju korisnika");
-  this._userService.register(this.user.username, this.user.password)
+  this._userService.register(this.user.name,this.user.surname,this.user.username, this.user.password)
     .subscribe( data => {this.router.navigate(['/login']); },
               error => {
                  console.error("Failed to register!");
                   alert("fail register?Try again pls? HAXXXX");
+                  this.loading=false;
             }
   );
 }

@@ -3,3 +3,4 @@ export class LoginDTO {
     password: string;
     id: number;
 }
+

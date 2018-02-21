@@ -7,7 +7,6 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import {LoginDTO} from './model/dto/login.dto';
 import {RegisterDTO} from './model/dto/register.dto';
-
 @Injectable()
 export class UserService {
   private _userApiUrl = 'http://localhost:8080/jeeRestProject/api/user';
@@ -23,7 +22,7 @@ export class UserService {
     return this._userId;
   }
 
-  public register(username:string, password:string) : Observable<RegisterDTO>{
+  public register(name:string, surname: string,username:string, password:string) : Observable<RegisterDTO>{
     let dto: RegisterDTO  = {
       name: name,
       surname: surname,
