@@ -5,13 +5,11 @@
     background-image:url('https://i.pinimg.com/originals/fe/e6/dc/fee6dc2064f8cab71050713b3c2844ee.jpg');
     background-position:50% 50%;
 }
-
 table{
     color:white;
+    padding:5px;
 }
 
-th{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-right: auto;
-    
+h1{
+    color:white;
 }

@@ -1,18 +1,20 @@
+<div class="image">
 <h1> OUTBOX </h1>
 
-<table  *ngIf='mails && mails.length'>
+<table  *ngIf='mails && mails.length' width="100%" style="max-width:600px" style="background-color:rgba(100,100,100,0.5);">
   <thead>
       <tr>
-          <th>Subject</th>
-          <th>To</th>
+          <th><h3>Subject</h3></th>
+          <th><h3>To</h3></th>
+          <th><h3>Message</h3></th>
       </tr>
   </thead>
   <tbody>
       <tr *ngFor='let mail of mails'>
           <td>{{mail.subject}}</td>
           <td>{{mail.receiver.name}} {{mail.receiver.surname}}</td>
-          <td>{{mail.content}}</td>
-          
+          <td>{{mail.content}}</td>          
       </tr>
   </tbody>
 </table>
+</div>
